@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE BLACKBOARD - Premium Student & Teacher Portal</title>
+  <!-- Google Fonts: Outfit for sleek tech headings, Inter for readable body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css?v=1.0.1">
+</head>
+<body>
+
+  <!-- Background Ambient Glow & Grid -->
+  <div class="ambient-bg">
+    <div class="glow-blob blob-1"></div>
+    <div class="glow-blob blob-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Real-time Toast Notifications -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- AUTH LOADER OVERLAY -->
+  <div id="auth-loader" class="loader-overlay hidden">
+    <div class="loader-content">
+      <div class="spinner"></div>
+      <p id="loader-text">Securing session...</p>
+    </div>
+  </div>
+
+  <!-- ==================== LANDING SECTION ==================== -->
+  <section id="landing-section" class="landing-section">
+    <!-- Sticky Header Navbar -->
+    <header class="landing-navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="logo-svg" style="width: 24px; height: 24px; color: var(--color-yellow-primary);">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.263 15.918a9 9 0 1 0 3.29-3.29m0 0A3 3 0 1 0 9 19.5h.008v-.008a2.999 2.999 0 0 0 0-5.992h-.008v.008Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707" />
+          </svg>
+          <span class="nav-brand-title">THE BLACKBOARD</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#about-us" class="nav-link">About Us</a>
+          <a href="#/programs" class="nav-link">Our Programs</a>
+          <a href="#achievements" class="nav-link">Our Achievements</a>
+          <a href="#team" class="nav-link">Our Team</a>
+          <a href="#location" class="nav-link">Location</a>
+          <a href="#enquire" class="nav-link">Enquire Now</a>
+        </nav>
+        <div class="nav-actions">
+          <button type="button" class="theme-toggle-btn" title="Toggle Academic Theme" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--color-glass-border); border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; color: var(--color-yellow-primary); transition: var(--transition-smooth); margin-right: 12px; outline: none;">
+            <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 20px; height: 20px;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m0 13.5V21M4.22 4.22l1.59 1.59m12.38 12.38 1.59 1.59M3 12h2.25m13.5 0H21M4.22 19.78l1.59-1.59m12.38-12.38 1.59-1.59M12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" />
+            </svg>
+            <svg class="theme-icon-moon hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 20px; height: 20px;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+            </svg>
+          </button>
+          <a href="#/login" class="portal-access-btn" id="btn-portal-access" style="text-decoration: none;">
+            <span class="btn-text">Portal Access</span>
+            <span class="btn-glow"></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section with Two-Column Grid -->
+    <section class="hero-section">
+      <div class="hero-grid-container">
+        <div class="hero-grid">
+          <!-- Hero Left Column: Brand Copy & CTAs -->
+          <div class="hero-content-left">
+            <div class="hero-tag">RANCHI'S ELITE ACADEMIC CELL</div>
+            <h1 class="hero-title">CHAMPIONING BOARDS,<br><span class="highlight-text">JEE & NEET IN RANCHI.</span></h1>
+            <p class="hero-subtitle">
+              THE BLACKBOARD is Ranchi's leading institute for CBSE, ICSE, and JAC board foundations alongside competitive JEE Main/Advanced and NEET preparation nodes. Under elite mentors, we bridge the gap between classroom theory and real entrance mastery.
+            </p>
+            <div class="hero-cta">
+              <a href="#enquire" class="cta-btn primary-cta">
+                <span class="btn-text">Enquire Now</span>
+              </a>
+              <a href="#/login" class="cta-btn secondary-cta" id="btn-hero-portal" style="text-decoration: none;">
+                <span class="btn-text">Enter Portal</span>
+                <span class="btn-glow"></span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: Interactive Digital Classroom Toggler Console -->
+          <div class="hero-content-right">
+            <div class="hero-interactive-console glass-panel" id="hero-widget">
+              <div class="console-header">
+                <span class="status-dot pulsing"></span>
+                <span class="console-title font-mono">BLACKBOARD METRIC PREVIEWER</span>
+              </div>
+              <div class="console-toggles" id="console-widget-toggles">
+                <button type="button" class="console-tab active" data-panel="panel-smart">AC CLASSROOMS</button>
+                <button type="button" class="console-tab" data-panel="panel-syllabus">SYLLABUS TRACKER</button>
+                <button type="button" class="console-tab" data-panel="panel-clinics">1-ON-1 CLINICS</button>
+              </div>
+              <div class="console-display" id="console-widget-display">
+                <!-- Panel 1: Smart AC Classroom -->
+                <div class="console-panel active" id="panel-smart">
+                  <div class="panel-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 32px; height: 32px;">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h4>Interactive Digital Smartboards</h4>
+                  <p>Our classrooms in Ranchi are fully air-conditioned and equipped with digital smartboards. Every session is recorded and compiled straight into the student portal for infinite conceptual re-watching.</p>
+                </div>
+                <!-- Panel 2: Syllabus Status Tracker -->
+                <div class="console-panel hidden" id="panel-syllabus">
+                  <div class="panel-progress-wrapper">
+                    <div class="progress-info">
+                      <span class="progress-title font-mono">JAC/CBSE PHYSICS CORE SYLLABUS</span>
+                      <span class="progress-percent font-mono">84% DONE</span>
+                    </div>
+                    <div class="progress-bar-track">
+                      <div class="progress-bar-fill" style="width: 84%;"></div>
+                    </div>
+                  </div>
+                  <h4>Intelligent Curriculum Diagnostics</h4>
+                  <p>We believe in syllabus discipline. Our custom student dashboard provides dynamic, real-time syllabus tracking broken down into weekly modules, so you never lose control of your preparation.</p>
+                </div>
+                <!-- Panel 3: 1-on-1 Focus Clinics -->
+                <div class="console-panel hidden" id="panel-clinics">
+                  <div class="panel-mentors-preview">
+                    <div class="mentor-badge font-mono">SUSHANT SIR (PHYSICS)</div>
+                    <div class="mentor-badge font-mono">BINAY SIR (CHEMISTRY)</div>
+                  </div>
+                  <h4>Direct Mentor Access Nodes</h4>
+                  <p>No student gets lost in large crowds. We maintain small batches to ensure personalized 1-on-1 focus. Students access customized chemistry mechanisms and physics clinics directly from Ranchi's top faculty.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="landing-content-section about-section">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">WHO WE ARE</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">Ranchi's dedicated core for high-scoring Board foundations and elite JEE/NEET results.</p>
+        </div>
+        <div class="about-ranchi-card glass-panel">
+          <div class="about-ranchi-content">
+            <h3>THE BLACKBOARD Academic Tenet</h3>
+            <p>
+              Located in the heart of Ranchi, Jharkhand, <strong>THE BLACKBOARD</strong> is a well-known academic institution committed to providing elite-grade coaching. We prepare students for <strong>JAC, CBSE, and ICSE Board Examinations</strong> (Classes 9th–12th) while offering specialized competitive training programs for <strong>NEET, JEE-MAIN & ADVANCED</strong>.
+            </p>
+            <p>
+              We stand apart in the Ranchi education industry by focusing on **concept-driven methodologies**. By replacing standard rote learning with digital telemetry, interactive modules, AC classrooms, and personal mentoring slots under Binay Sir and Sushant Sir, we make sure that our learners construct solid, high-scoring foundations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Programs Section -->
+    <section id="programs" class="landing-content-section programs-section">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">OUR ACADEMIC PROGRAMS</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">Structured course nodes engineered for board supremacy and top competitive percentiles in Ranchi.</p>
+        </div>
+        <div class="about-grid">
+          <!-- Program 1: Board Foundation -->
+          <div class="about-card glass-panel">
+            <div class="about-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="about-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <div class="prog-tag font-mono">CLASSES 9TH - 12TH</div>
+            <h3>Board Foundation (CBSE, ICSE, JAC)</h3>
+            <p>Comprehensive, deep conceptual preparation for board examinations. We prioritize full theory construction, descriptive answering skills, and weekly syllabus analytics to secure a top board scorecard.</p>
+          </div>
+          <!-- Program 2: JEE Main/Advanced -->
+          <div class="about-card glass-panel">
+            <div class="about-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="about-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="prog-tag font-mono">ENGINEERING EXAMS</div>
+            <h3>JEE-MAIN & ADVANCED</h3>
+            <p>Rigorous, advanced coaching focused on JEE patterns. Students receive advanced mathematical matrix modules, physics vector kinetics, and chemistry telemetry diagnostics to hit elite engineering ranks.</p>
+          </div>
+          <!-- Program 3: NEET Medical -->
+          <div class="about-card glass-panel">
+            <div class="about-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="about-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <div class="prog-tag font-mono">MEDICAL EXAMS</div>
+            <h3>NEET / AIIMS PREPARATION</h3>
+            <p>Targeted medical coaching under top biology mentors and organic chemistry experts. Includes structured reaction diagrams, diagnostic evaluation tests, and customized biological conceptual mapping.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Achievements Section -->
+    <section id="achievements" class="landing-content-section achievements-section">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">THE RECORD OF EXCELLENCE</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">Our selection percentiles and outcomes stand as testimony to our syllabus rigor in Ranchi.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card glass-panel">
+            <div class="stat-num">99.8%</div>
+            <div class="stat-label">Peak Percentile in JEE/NEET</div>
+          </div>
+          <div class="stat-card glass-panel">
+            <div class="stat-num">1,500+</div>
+            <div class="stat-label">IIT, NIT & Medical Admissions</div>
+          </div>
+          <div class="stat-card glass-panel">
+            <div class="stat-num">15+</div>
+            <div class="stat-label">Years of Ranchi Pedagogy Stature</div>
+          </div>
+          <div class="stat-card glass-panel">
+            <div class="stat-num">1-on-1</div>
+            <div class="stat-label">Dedicated Personal Mentoring Ratio</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team Section (Ranchi Faculty Core) -->
+    <section id="team" class="landing-content-section team-section">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">DISTINGUISHED MENTORS</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">Learn from Ranchi's top educators committed to conceptual clarity.</p>
+        </div>
+        <div class="team-grid">
+          <!-- Sushant Sir -->
+          <div class="team-card glass-panel">
+            <div class="team-avatar-wrapper">
+              <div class="team-avatar">SS</div>
+            </div>
+            <div class="team-info">
+              <h3>Sushant Sir</h3>
+              <div class="team-dept font-mono">Head of Physics (Academic Director)</div>
+              <p class="team-bio">Highly regarded physics mentor specializing in wave kinetics, electrodynamics, and advanced entrance mechanics. Over 12 years directing JEE/NEET aspirants.</p>
+            </div>
+          </div>
+          <!-- Binay Sir -->
+          <div class="team-card glass-panel">
+            <div class="team-avatar-wrapper">
+              <div class="team-avatar">BS</div>
+            </div>
+            <div class="team-info">
+              <h3>Binay Sir</h3>
+              <div class="team-dept font-mono">Head of Chemistry (Academic Director)</div>
+              <p class="team-bio">Ranchi's leading chemistry expert. Creator of the "Intuitive Reaction Blueprint" making organic synthesis, thermodynamics, and physical chemistry highly logical.</p>
+            </div>
+          </div>
+          <!-- Alan Turing -->
+          <div class="team-card glass-panel">
+            <div class="team-avatar-wrapper">
+              <div class="team-avatar">AT</div>
+            </div>
+            <div class="team-info">
+              <h3>Dr. Alan Turing</h3>
+              <div class="team-dept font-mono">Head of Mathematics & CS</div>
+              <p class="team-bio">Distinguished cryptanalyst and algorithms scholar. Expert in calculus vectors, differential equations, and advanced problem-solving telemetry.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ranchi Location Section & Pulsing Satellite Map -->
+    <section id="location" class="landing-content-section location-section">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">OUR ACADEMIC LOCATION</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">Find us at the heart of Ranchi's academic hub to visit or secure admission.</p>
+        </div>
+        <div class="location-grid-container">
+          <div class="location-grid">
+            <!-- Left location info -->
+            <div class="location-info-card glass-panel">
+              <div class="loc-landmark-badge font-mono">DANG RATOLI CHOWK</div>
+              <h3>THE BLACKBOARD RANCHI</h3>
+              <div class="address-details">
+                <div class="detail-row">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="loc-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>2nd Floor, Ajit Enclave, Above TVS Showroom, Dangratoli Chowk, Purulia Road, Ranchi, Jharkhand - 834001</span>
+                </div>
+                <div class="detail-row">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="loc-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <span>+91 91234 56789 &bull; +91 98765 43210</span>
+                </div>
+                <div class="detail-row">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="loc-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <span>core@theblackboardranchi.com</span>
+                </div>
+              </div>
+              <div class="loc-footer font-mono">LANDMARK: ABOVE TVS SHOWROOM / AJIT ENCLAVE</div>
+            </div>
+
+            <!-- Right visual satellite grid map -->
+            <div class="ranchi-satellite-map glass-panel" id="ranchi-satellite-map">
+              <div class="sat-grid-lines"></div>
+              <div class="sat-scanning-bar"></div>
+              <div class="sat-target-lines"></div>
+              <div class="sat-target-reticle"></div>
+              <div class="sat-telemetry font-mono">
+                <div class="tel-row"><span class="tel-lbl">LAT:</span> 23.3695° N</div>
+                <div class="tel-row"><span class="tel-lbl">LONG:</span> 85.3400° E</div>
+                <div class="tel-row"><span class="tel-lbl">TARGET:</span> DANG RATOLI CHOWK</div>
+                <div class="tel-row"><span class="tel-lbl">SITE STATUS:</span> ACTIVE / ONLINE</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enquire Now Section -->
+    <section id="enquire" class="landing-content-section enquiry-section">
+      <div class="section-container" style="max-width: 600px;">
+        <div class="section-header">
+          <h2 class="section-title">SECURE YOUR ENROLLMENT</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">Submit your enquiry node to start the academic evaluation and secure batch placement.</p>
+        </div>
+        <div class="enquiry-card glass-panel">
+          <form id="enquiry-form" autocomplete="off">
+            <div class="input-group">
+              <div class="input-wrapper">
+                <input type="text" id="enquiry-name" required placeholder=" ">
+                <label for="enquiry-name">Full Name</label>
+              </div>
+            </div>
+            <div class="input-group">
+              <div class="input-wrapper">
+                <input type="email" id="enquiry-email" required placeholder=" ">
+                <label for="enquiry-email">Email Address</label>
+              </div>
+            </div>
+            <div class="input-group">
+              <div class="input-wrapper">
+                <select id="enquiry-course" required style="width: 100%; background: var(--color-charcoal-input); border: 1px solid var(--color-glass-border); color: var(--color-text-bright); padding: 12px 12px 12px 8px; border-radius: 8px; font-family: var(--font-body); outline: none; box-sizing: border-box; height: 50px; font-size: 0.95rem;">
+                  <option value="" disabled selected hidden>Select Course Path</option>
+                  <option value="board">JAC/CBSE Board Foundation (Classes 9th - 12th)</option>
+                  <option value="jee">JEE Main & Advanced Elite Roster</option>
+                  <option value="neet">NEET Premier Path (Medical Entrance)</option>
+                  <option value="physics">Advanced Physics Specialization (Sushant Sir)</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <div class="input-wrapper" style="min-height: 100px;">
+                <textarea id="enquiry-message" required placeholder=" " style="width: 100%; background: var(--color-charcoal-input); border: 1px solid var(--color-glass-border); color: var(--color-text-bright); padding: 12px; border-radius: 8px; font-family: var(--font-body); outline: none; box-sizing: border-box; resize: vertical; min-height: 100px;"></textarea>
+                <label for="enquiry-message" style="top: 12px;">Describe your academic goals</label>
+              </div>
+            </div>
+            <button type="submit" class="submit-btn" style="margin-top: 10px;">
+              <span class="btn-text">Transmit Enquiry</span>
+              <span class="btn-glow"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Address Section -->
+    <footer class="landing-footer">
+      <div class="footer-container">
+        <div class="footer-brand-section">
+          <div class="nav-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="logo-svg" style="width: 20px; height: 20px; color: var(--color-yellow-primary);">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.263 15.918a9 9 0 1 0 3.29-3.29m0 0A3 3 0 1 0 9 19.5h.008v-.008a2.999 2.999 0 0 0 0-5.992h-.008v.008Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707" />
+            </svg>
+            <span class="nav-brand-title" style="font-size: 1.1rem;">THE BLACKBOARD</span>
+          </div>
+          <p class="footer-tagline">Academic excellence engineered for board supremacy and elite scientific outcomes in Ranchi.</p>
+        </div>
+        <div class="footer-address-info">
+          <h4>ACADEMIC RANCHI CENTRE</h4>
+          <p class="footer-addr">2nd Floor, Ajit Enclave, Purulia Road, Dangratoli Chowk, Ranchi, JH - 834001</p>
+          <p class="footer-hours">In-Person Admissions: Mon - Sat (09:00 AM - 07:00 PM)</p>
+          <p class="footer-contact">
+            <span>T: +91 91234 56789</span> &bull; 
+            <span>E: core@theblackboardranchi.com</span>
+          </p>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 THE BLACKBOARD Academic Network (Ranchi). All public and portal telemetry secured.
+      </div>
+    </footer>
+  </section>
+
+  <!-- ==================== PROGRAMS PAGE SECTION ==================== -->
+  <section id="programs-page" class="landing-section hidden" style="padding-top: 100px; min-height: 100vh; background: radial-gradient(circle at 50% 0%, rgba(255, 234, 0, 0.03) 0%, var(--color-pitch) 100%);">
+    <!-- Mini Sticky Header Navbar for Programs Page -->
+    <header class="landing-navbar" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;">
+      <div class="nav-container">
+        <div class="nav-brand" style="cursor: pointer;" onclick="window.location.hash='#/'">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="logo-svg" style="width: 24px; height: 24px; color: var(--color-yellow-primary);">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.263 15.918a9 9 0 1 0 3.29-3.29m0 0A3 3 0 1 0 9 19.5h.008v-.008a2.999 2.999 0 0 0 0-5.992h-.008v.008Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707" />
+          </svg>
+          <span class="nav-brand-title">THE BLACKBOARD</span>
+        </div>
+        <div class="nav-actions">
+          <button type="button" class="theme-toggle-btn" title="Toggle Academic Theme" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--color-glass-border); border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; color: var(--color-yellow-primary); transition: var(--transition-smooth); margin-right: 12px; outline: none;">
+            <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 20px; height: 20px;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m0 13.5V21M4.22 4.22l1.59 1.59m12.38 12.38 1.59 1.59M3 12h2.25m13.5 0H21M4.22 19.78l1.59-1.59m12.38-12.38 1.59-1.59M12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" />
+            </svg>
+            <svg class="theme-icon-moon hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 20px; height: 20px;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+            </svg>
+          </button>
+          <a href="#/" class="cta-btn secondary-cta" style="text-decoration: none; padding: 10px 18px; font-size: 0.82rem; height: auto;">
+            <span class="btn-text">Back to Home</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="section-container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+      <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+        <div class="loc-landmark-badge font-mono" style="margin: 0 auto 15px auto; display: inline-block; background: rgba(255, 234, 0, 0.08); border: 1px solid rgba(255, 234, 0, 0.2); color: var(--color-yellow-primary); padding: 6px 12px; border-radius: 4px; font-size: 0.72rem; letter-spacing: 0.06em;">THE BLACKBOARD CYBER-OFFERINGS</div>
+        <h2 class="section-title" style="font-size: 2.2rem; font-weight: 800; color: var(--color-text-bright); margin-bottom: 12px; text-transform: uppercase;">ACADEMIC PROGRAMS, FEES & SCHEDULES</h2>
+        <div class="section-divider" style="width: 60px; height: 3px; background: var(--color-yellow-primary); margin: 0 auto 15px auto;"></div>
+        <p class="section-desc" style="color: var(--color-text-muted); font-size: 0.95rem; max-width: 600px; margin: 0 auto;">Select from Ranchi's most structured, curriculum-aligned academic batch paths designed for boards supremacy and entrance success.</p>
+      </div>
+
+      <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+        
+        <!-- Batch 1: Board Foundation -->
+        <div class="about-card glass-panel" style="padding: 30px; display: flex; flex-direction: column; text-align: left; background: var(--color-glass-bg); border: 1px solid var(--color-glass-border); border-radius: 12px; transition: all 0.3s ease;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+            <div class="about-icon-wrapper" style="background: rgba(255, 234, 0, 0.05); border: 1px solid rgba(255, 234, 0, 0.1); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; color: var(--color-yellow-primary);">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 24px; height: 24px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <span class="loc-landmark-badge font-mono" style="margin: 0; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); color: var(--color-success); font-size: 0.65rem;">SEATS AVAILABLE</span>
+          </div>
+          <div class="prog-tag font-mono" style="text-align: left;">CLASSES 9TH - 12TH</div>
+          <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--color-text-bright); margin-bottom: 12px;">Board Foundation (CBSE, ICSE, JAC)</h3>
+          <p style="font-size: 0.85rem; color: var(--color-text-regular); line-height: 1.5; margin-bottom: 20px; flex-grow: 1;">
+            Deep conceptual preparation targeting 95%+ scores in school and board examinations. Covers Mathematics, Physics, Chemistry, and Biology modules aligned with official textbooks.
+          </p>
+          
+          <div style="border-top: 1px solid var(--color-glass-border); padding-top: 20px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Batch Timing:</span>
+              <span style="color: var(--color-text-bright); font-weight: 600;" class="font-mono">03:30 PM - 05:30 PM (M-F)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Annual Fee:</span>
+              <span style="color: var(--color-yellow-primary); font-weight: 700;" class="font-mono">₹24,000 / year</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Installment Plan:</span>
+              <span style="color: var(--color-text-bright);" class="font-mono">₹2,500 / month (10 months)</span>
+            </div>
+          </div>
+          
+          <a href="#/enquire" class="cta-btn primary-cta" style="text-decoration: none; width: 100%; text-align: center; box-sizing: border-box; justify-content: center;">
+            <span class="btn-text">Enquire for Batch</span>
+          </a>
+        </div>
+
+        <!-- Batch 2: JEE Main/Advanced -->
+        <div class="about-card glass-panel" style="padding: 30px; display: flex; flex-direction: column; text-align: left; background: var(--color-glass-bg); border: 1px solid var(--color-glass-border); border-radius: 12px; transition: all 0.3s ease;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+            <div class="about-icon-wrapper" style="background: rgba(255, 234, 0, 0.05); border: 1px solid rgba(255, 234, 0, 0.1); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; color: var(--color-yellow-primary);">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 24px; height: 24px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <span class="loc-landmark-badge font-mono" style="margin: 0; background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.2); color: #ef4444; font-size: 0.65rem;">FEW SEATS LEFT</span>
+          </div>
+          <div class="prog-tag font-mono" style="text-align: left;">ENGINEERING ENTRANCE</div>
+          <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--color-text-bright); margin-bottom: 12px;">JEE-MAIN & ADVANCED</h3>
+          <p style="font-size: 0.85rem; color: var(--color-text-regular); line-height: 1.5; margin-bottom: 20px; flex-grow: 1;">
+            Rigorous, analytical syllabus path engineered to hit elite JEE percentiles. Includes advanced mathematical kinetics, organic synthesis blueprints, vector dynamics, and full simulated online telemetry mocks.
+          </p>
+          
+          <div style="border-top: 1px solid var(--color-glass-border); padding-top: 20px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Batch Timing:</span>
+              <span style="color: var(--color-text-bright); font-weight: 600;" class="font-mono">08:00 AM - 11:30 AM (M-Sat)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Annual Fee:</span>
+              <span style="color: var(--color-yellow-primary); font-weight: 700;" class="font-mono">₹60,000 / year</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Installment Plan:</span>
+              <span style="color: var(--color-text-bright);" class="font-mono">₹5,500 / month (11 months)</span>
+            </div>
+          </div>
+          
+          <a href="#/enquire" class="cta-btn primary-cta" style="text-decoration: none; width: 100%; text-align: center; box-sizing: border-box; justify-content: center;">
+            <span class="btn-text">Enquire for Batch</span>
+          </a>
+        </div>
+
+        <!-- Batch 3: NEET Medical -->
+        <div class="about-card glass-panel" style="padding: 30px; display: flex; flex-direction: column; text-align: left; background: var(--color-glass-bg); border: 1px solid var(--color-glass-border); border-radius: 12px; transition: all 0.3s ease;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+            <div class="about-icon-wrapper" style="background: rgba(255, 234, 0, 0.05); border: 1px solid rgba(255, 234, 0, 0.1); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; color: var(--color-yellow-primary);">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 24px; height: 24px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <span class="loc-landmark-badge font-mono" style="margin: 0; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); color: var(--color-success); font-size: 0.65rem;">SEATS AVAILABLE</span>
+          </div>
+          <div class="prog-tag font-mono" style="text-align: left;">MEDICAL ENTRANCE</div>
+          <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--color-text-bright); margin-bottom: 12px;">NEET / AIIMS PREPARATION</h3>
+          <p style="font-size: 0.85rem; color: var(--color-text-regular); line-height: 1.5; margin-bottom: 20px; flex-grow: 1;">
+            Dedicated syllabus execution covering NEET biology systematics and organic chemistry mechanisms. Features intensive diagnostic evaluations, 1-on-1 focus slots, and doubt clearance sessions.
+          </p>
+          
+          <div style="border-top: 1px solid var(--color-glass-border); padding-top: 20px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Batch Timing:</span>
+              <span style="color: var(--color-text-bright); font-weight: 600;" class="font-mono">12:00 PM - 03:30 PM (M-Sat)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Annual Fee:</span>
+              <span style="color: var(--color-yellow-primary); font-weight: 700;" class="font-mono">₹55,000 / year</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Installment Plan:</span>
+              <span style="color: var(--color-text-bright);" class="font-mono">₹5,000 / month (11 months)</span>
+            </div>
+          </div>
+          
+          <a href="#/enquire" class="cta-btn primary-cta" style="text-decoration: none; width: 100%; text-align: center; box-sizing: border-box; justify-content: center;">
+            <span class="btn-text">Enquire for Batch</span>
+          </a>
+        </div>
+
+        <!-- Batch 4: Advanced Physics by Sushant Sir -->
+        <div class="about-card glass-panel" style="padding: 30px; display: flex; flex-direction: column; text-align: left; background: var(--color-glass-bg); border: 1px solid var(--color-glass-border); border-radius: 12px; transition: all 0.3s ease;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+            <div class="about-icon-wrapper" style="background: rgba(255, 234, 0, 0.05); border: 1px solid rgba(255, 234, 0, 0.1); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; color: var(--color-yellow-primary);">
+              <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.1rem;">SS</span>
+            </div>
+            <span class="loc-landmark-badge font-mono" style="margin: 0; background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.2); color: #ef4444; font-size: 0.65rem;">BATCH ALMOST FULL</span>
+          </div>
+          <div class="prog-tag font-mono" style="text-align: left;">PHYSICS SPECIALIZATION</div>
+          <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--color-text-bright); margin-bottom: 12px;">Elite Physics (Sushant Sir)</h3>
+          <p style="font-size: 0.85rem; color: var(--color-text-regular); line-height: 1.5; margin-bottom: 20px; flex-grow: 1;">
+            Specialized curriculum node under Ranchi's leading physics director Sushant Sir. Decrypts advanced vector mechanics, wave mechanics, thermodynamics diagnostics, and electrodynamics.
+          </p>
+          
+          <div style="border-top: 1px solid var(--color-glass-border); padding-top: 20px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Batch Timing:</span>
+              <span style="color: var(--color-text-bright); font-weight: 600;" class="font-mono">05:30 PM - 07:00 PM (T,Th,S)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Annual Fee:</span>
+              <span style="color: var(--color-yellow-primary); font-weight: 700;" class="font-mono">₹16,000 / year</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Installment Plan:</span>
+              <span style="color: var(--color-text-bright);" class="font-mono">₹2,000 / month (8 months)</span>
+            </div>
+          </div>
+          
+          <a href="#/enquire" class="cta-btn primary-cta" style="text-decoration: none; width: 100%; text-align: center; box-sizing: border-box; justify-content: center;">
+            <span class="btn-text">Enquire for Batch</span>
+          </a>
+        </div>
+
+        <!-- Batch 5: Advanced Chemistry by Binay Sir -->
+        <div class="about-card glass-panel" style="padding: 30px; display: flex; flex-direction: column; text-align: left; background: var(--color-glass-bg); border: 1px solid var(--color-glass-border); border-radius: 12px; transition: all 0.3s ease;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+            <div class="about-icon-wrapper" style="background: rgba(255, 234, 0, 0.05); border: 1px solid rgba(255, 234, 0, 0.1); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; color: var(--color-yellow-primary);">
+              <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.1rem;">BS</span>
+            </div>
+            <span class="loc-landmark-badge font-mono" style="margin: 0; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); color: var(--color-success); font-size: 0.65rem;">SEATS AVAILABLE</span>
+          </div>
+          <div class="prog-tag font-mono" style="text-align: left;">CHEMISTRY SPECIALIZATION</div>
+          <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--color-text-bright); margin-bottom: 12px;">Elite Chemistry (Binay Sir)</h3>
+          <p style="font-size: 0.85rem; color: var(--color-text-regular); line-height: 1.5; margin-bottom: 20px; flex-grow: 1;">
+            Intelligent Chemistry concepts under director Binay Sir. Master intuitive mechanism reaction blueprints, kinetics formulas, periodic tables, and organic diagnostics.
+          </p>
+          
+          <div style="border-top: 1px solid var(--color-glass-border); padding-top: 20px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Batch Timing:</span>
+              <span style="color: var(--color-text-bright); font-weight: 600;" class="font-mono">05:30 PM - 07:00 PM (M,W,F)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Annual Fee:</span>
+              <span style="color: var(--color-yellow-primary); font-weight: 700;" class="font-mono">₹16,000 / year</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+              <span style="color: var(--color-text-muted);">Installment Plan:</span>
+              <span style="color: var(--color-text-bright);" class="font-mono">₹2,000 / month (8 months)</span>
+            </div>
+          </div>
+          
+          <a href="#/enquire" class="cta-btn primary-cta" style="text-decoration: none; width: 100%; text-align: center; box-sizing: border-box; justify-content: center;">
+            <span class="btn-text">Enquire for Batch</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LOGIN SECTION ==================== -->
+  <section id="login-section" class="auth-section hidden">
+    <div class="login-card-container">
+      <a href="#/" class="back-home-link" id="btn-back-home">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+        </svg>
+        <span>Back to Main Page</span>
+      </a>
+
+      <div class="brand-header">
+        <div class="brand-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="logo-svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.263 15.918a9 9 0 1 0 3.29-3.29m0 0A3 3 0 1 0 9 19.5h.008v-.008a2.999 2.999 0 0 0 0-5.992h-.008v.008Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707" />
+          </svg>
+        </div>
+        <h1 class="brand-title">THE BLACKBOARD</h1>
+      </div>
+
+      <div class="login-card">
+        <!-- Role Tabs Toggle -->
+        <div class="role-tabs" id="login-role-tabs">
+          <button type="button" class="role-tab active" data-role="student" id="tab-student">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+            </svg>
+            <span>Student</span>
+          </button>
+          <button type="button" class="role-tab" data-role="teacher" id="tab-teacher">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a3 3 0 0 0-3-3H9.75a3 3 0 0 0-3-3h10.5a3 3 0 0 0-3 3H15a3 3 0 0 0-3 3ZM3.75 18h16.5M4.5 19.5h15m-15-3v-9a1.5 1.5 0 0 1 1.5-1.5h12a1.5 1.5 0 0 1 1.5 1.5v9m-15 0h15" />
+            </svg>
+            <span>Teacher</span>
+          </button>
+        </div>
+
+        <div class="welcome-text-container" id="login-welcome-header">
+          <h2 id="login-header-title">Welcome Student!</h2>
+        </div>
+
+        <!-- Login Form -->
+        <form id="login-form" autocomplete="off">
+          <!-- Input fields -->
+          <div class="input-group">
+            <div class="input-wrapper">
+              <input type="email" id="login-email" required placeholder=" " autocomplete="off">
+              <label for="login-email">Email Address</label>
+              <span class="input-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                </svg>
+              </span>
+            </div>
+            <span class="error-msg" id="email-error">Please enter a valid academic email address.</span>
+          </div>
+
+          <div class="input-group">
+            <div class="input-wrapper">
+              <input type="password" id="login-password" required placeholder=" " autocomplete="new-password">
+              <label for="login-password">Security Password</label>
+              <span class="input-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                </svg>
+              </span>
+              <button type="button" class="password-toggle-btn" id="password-toggle" aria-label="Toggle Password Visibility">
+                <svg id="eye-open-icon" class="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+                <svg id="eye-closed-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
+                </svg>
+              </button>
+            </div>
+            <span class="error-msg" id="password-error">Password must contain at least 6 characters.</span>
+          </div>
+
+          <!-- Extra login details -->
+          <div class="login-actions">
+            <label class="checkbox-container">
+              <input type="checkbox" id="remember-me">
+              <span class="checkmark"></span>
+              <span class="checkbox-label">Keep me verified</span>
+            </label>
+            <a href="#" class="forgot-link" id="btn-forgot-password">Reset Key?</a>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn" id="login-submit-btn">
+            <span class="btn-text">Login</span>
+            <span class="btn-glow"></span>
+          </button>
+
+          <!-- Toggle Link to Signup Form -->
+          <div class="form-toggle-link" style="margin-top: 20px; text-align: center; font-size: 0.85rem; font-family: var(--font-body);">
+            <span style="color: var(--color-text-muted);">New User? </span>
+            <a href="#" id="btn-show-signup" style="color: var(--color-yellow-primary); text-decoration: none; font-weight: 600; transition: var(--transition-smooth); letter-spacing: 0.02em;">Sign Up</a>
+          </div>
+        </form>
+
+        <!-- Signup Form (Hidden by Default) -->
+        <form id="signup-form" class="hidden" autocomplete="off">
+          <div class="welcome-text-container" style="margin-bottom: 24px;">
+            <h2 id="signup-header-title">Create Account</h2>
+          </div>
+
+          <!-- Input fields -->
+          <div class="input-group">
+            <div class="input-wrapper">
+              <input type="text" id="signup-name" required placeholder=" " autocomplete="off">
+              <label for="signup-name">Full Name</label>
+              <span class="input-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+              </span>
+            </div>
+            <span class="error-msg" id="signup-name-error">Please enter your full name.</span>
+          </div>
+
+          <div class="input-group">
+            <div class="input-wrapper">
+              <input type="email" id="signup-email" required placeholder=" " autocomplete="off">
+              <label for="signup-email">Email Address</label>
+              <span class="input-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                </svg>
+              </span>
+            </div>
+            <span class="error-msg" id="signup-email-error">Please enter a valid academic email address.</span>
+          </div>
+
+          <div class="input-group">
+            <div class="input-wrapper">
+              <input type="password" id="signup-password" required placeholder=" " autocomplete="new-password">
+              <label for="signup-password">Security Password</label>
+              <span class="input-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                </svg>
+              </span>
+            </div>
+            <span class="error-msg" id="signup-password-error">Password must contain at least 6 characters.</span>
+          </div>
+
+          <!-- Signup strictly for students, role dropdown removed -->
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn" id="signup-submit-btn" style="margin-top: 10px;">
+            <span class="btn-text">Create Account</span>
+            <span class="btn-glow"></span>
+          </button>
+
+          <!-- Toggle Link to Login Form -->
+          <div class="form-toggle-link" style="margin-top: 20px; text-align: center; font-size: 0.85rem; font-family: var(--font-body);">
+            <span style="color: var(--color-text-muted);">Already have an account? </span>
+            <a href="#" id="btn-show-login" style="color: var(--color-yellow-primary); text-decoration: none; font-weight: 600; transition: var(--transition-smooth); letter-spacing: 0.02em;">Login</a>
+          </div>
+        </form>
+
+        <!-- Dynamic Quick Credentials helper -->
+        <div class="demo-helpers" id="login-demo-helpers">
+          <p class="helpers-title">Quick Demo Login:</p>
+          <div class="helpers-row">
+            <button class="demo-chip" id="demo-student-btn">Student (alex@theblackboard.edu)</button>
+            <button class="demo-chip" id="demo-teacher-btn">Teacher (vance@theblackboard.edu)</button>
+          </div>
+          <p class="helpers-note">Use any password (min 6 chars)</p>
+        </div>
+
+        <!-- Subtle Admin Link at the very bottom -->
+        <div class="admin-link-wrapper" style="margin-top: 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 15px;">
+          <button type="button" class="admin-link-btn" id="tab-admin" style="background: none; border: none; color: var(--color-text-muted); font-size: 0.74rem; cursor: pointer; transition: var(--transition-smooth); font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 14px; height: 14px;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z" />
+            </svg>
+            <span>Admin Login</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TEACHER DASHBOARD ==================== -->
+  <main id="teacher-dashboard" class="dashboard-layout hidden">
+    <!-- Navbar -->
+    <header class="dash-navbar">
+      <div class="nav-left">
+        <div class="nav-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="logo-svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.263 15.918a9 9 0 1 0 3.29-3.29m0 0A3 3 0 1 0 9 19.5h.008v-.008a2.999 2.999 0 0 0 0-5.992h-.008v.008Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707" />
+          </svg>
+        </div>
+        <div>
+          <span class="nav-brand">THE BLACKBOARD</span>
+          <span class="nav-badge badge-teacher">Faculty Hub</span>
+        </div>
+      </div>
+      <div class="nav-right">
+        <div class="user-profile">
+          <div class="avatar text-avatar">MV</div>
+          <div class="profile-info">
+            <span class="profile-name">Prof. Marcus Vance</span>
+            <span class="profile-role">Department of Quantum Physics</span>
+          </div>
+        </div>
+        <button type="button" class="theme-toggle-btn" title="Toggle Academic Theme" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--color-glass-border); border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; color: var(--color-yellow-primary); transition: var(--transition-smooth); margin-right: 12px; outline: none;">
+          <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 20px; height: 20px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m0 13.5V21M4.22 4.22l1.59 1.59m12.38 12.38 1.59 1.59M3 12h2.25m13.5 0H21M4.22 19.78l1.59-1.59m12.38-12.38 1.59-1.59M12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" />
+          </svg>
+          <svg class="theme-icon-moon hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 20px; height: 20px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+          </svg>
+        </button>
+        <button class="logout-btn" id="teacher-logout">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+          </svg>
+          <span>Disconnect</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Sub-Navbar Dash Tab Bar -->
+    <div class="dash-tabs-bar">
+      <button class="dash-tab active" data-target="teacher-tab-schedule" data-role="teacher">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-svg-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+        </svg>
+        <span>Lecture Hub</span>
+      </button>
+      <button class="dash-tab" data-target="teacher-tab-publish" data-role="teacher">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-svg-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25z" />
+        </svg>
+        <span>Publish Lecture</span>
+      </button>
+      <button class="dash-tab" data-target="teacher-tab-students" data-role="teacher">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-svg-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.109A9.642 9.642 0 0112 22.5a9.64 9.64 0 01-3-3.272v-.109A9.3 9.3 0 0012 18c1.066 0 2.083.178 3.033.51M9.75 19.128a9.38 9.38 0 01-2.625.372 9.337 9.337 0 01-4.121-.952 4.125 4.125 0 017.533-2.493M9.75 19.128v-.003c0-1.113.285-2.16.786-3.07M12 18a9.3 9.3 0 01-3-3.272m3 3.272V18c0-1.077-.197-2.107-.557-3.056M3.75 6a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0ZM15.75 6a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0ZM12 7.5a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" />
+        </svg>
+        <span>Student Registry</span>
+      </button>
+    </div>
+
+    <!-- Dashboard Content Container -->
+    <div class="dash-container">
+      <!-- Top Metrics -->
+      <section class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.109A9.642 9.642 0 0 1 12 22.5a9.64 9.64 0 0 1-3-3.272v-.109A9.3 9.3 0 0 0 12 18c1.066 0 2.083.178 3.033.51M9.75 19.128a9.38 9.38 0 0 1-2.625.372 9.337 9.337 0 0 1-4.121-.952 4.125 4.125 0 0 1 7.533-2.493M9.75 19.128v-.003c0-1.113.285-2.16.786-3.07M12 18a9.3 9.3 0 0 1-3-3.272m3 3.272V18c0-1.077-.197-2.107-.557-3.056M3.75 6a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0ZM15.75 6a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0ZM12 7.5a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" />
+            </svg>
+          </div>
+          <div>
+            <p class="metric-label">Active Students</p>
+            <h3 class="metric-value" id="count-total-students">128</h3>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+            </svg>
+          </div>
+          <div>
+            <p class="metric-label">Classes Scheduled Today</p>
+            <h3 class="metric-value" id="count-classes-today">3</h3>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+          </div>
+          <div>
+            <p class="metric-label">Academic Department</p>
+            <h3 class="metric-value" id="teacher-metric-dept" style="font-size: 1.15rem; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 170px;">Quantum Physics</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TEACHER PANEL 1: LECTURE HUB ==================== -->
+      <div class="tab-panel active" id="teacher-tab-schedule">
+        <div class="dash-grid-split">
+          <!-- Scheduled Classes Section -->
+          <div class="panel">
+            <div class="panel-header">
+              <h2 class="panel-title">
+                <span class="yellow-bullet"></span>Scheduled Classes
+              </h2>
+              <span class="badge" id="class-list-count">3 lectures</span>
+            </div>
+            <div class="class-cards-list" id="teacher-class-list">
+              <!-- Dynamically populated classes -->
+            </div>
+          </div>
+
+          <!-- Create A Class Form Panel -->
+          <div class="panel">
+            <div class="panel-header">
+              <h2 class="panel-title">
+                <span class="yellow-bullet"></span>Schedule New Class
+              </h2>
+            </div>
+            <form id="create-class-form" class="dashboard-form">
+              <div class="form-row grid-2">
+                <div class="form-group">
+                  <label for="class-title">Lecture Topic</label>
+                  <input type="text" id="class-title" placeholder="e.g., Quantum Entanglement and Spin" required>
+                </div>
+                <div class="form-group">
+                  <label for="class-subject">Course Code</label>
+                  <input type="text" id="class-subject" placeholder="e.g., PHY-402" required>
+                </div>
+              </div>
+
+              <div class="form-row grid-3">
+                <div class="form-group">
+                  <label for="class-time">Start Time</label>
+                  <input type="time" id="class-time" required>
+                </div>
+                <div class="form-group">
+                  <label for="class-duration">Duration (mins)</label>
+                  <select id="class-duration">
+                    <option value="60">60 mins</option>
+                    <option value="90" selected>90 mins</option>
+                    <option value="120">120 mins</option>
+                    <option value="180">180 mins</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="class-location">Room / Link</label>
+                  <input type="text" id="class-location" placeholder="e.g., Auditorium B or Webex link" required>
+                </div>
+              </div>
+
+              <button type="submit" class="submit-btn full-width" style="margin-top: 15px;">
+                <span class="btn-text">Schedule Lecture Class</span>
+                <span class="btn-glow"></span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== TEACHER PANEL 2: PUBLISH LECTURE ==================== -->
+      <div class="tab-panel hidden" id="teacher-tab-publish">
+        <div class="panel" style="max-width: 800px; margin: 0 auto;">
+          <div class="panel-header">
+            <h2 class="panel-title">
+              <span class="yellow-bullet"></span>Publish Recorded Lecture
+            </h2>
+          </div>
+          <form id="publish-lecture-form" class="dashboard-form">
+            <div class="form-row grid-2">
+              <div class="form-group">
+                <label for="publish-title">Lecture Title</label>
+                <input type="text" id="publish-title" placeholder="e.g., Intro to Wave Particle Duality" required>
+              </div>
+              <div class="form-group">
+                <label for="publish-code">Course Code</label>
+                <input type="text" id="publish-code" placeholder="e.g., PHY-101" required>
+              </div>
+            </div>
+            
+            <div class="form-row grid-3">
+              <div class="form-group">
+                <label for="publish-subject">Subject Tag</label>
+                <select id="publish-subject" style="background: var(--color-pitch); border-color: rgba(255,255,255,0.08); color: #fff; width: 100%; padding: 8px 12px; border-radius: 8px;">
+                  <option value="Physics">Physics</option>
+                  <option value="Chemistry">Chemistry</option>
+                  <option value="Maths">Mathematics</option>
+                  <option value="Astronomy">Astronomy</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="publish-duration">Duration (e.g., 45:10)</label>
+                <input type="text" id="publish-duration" placeholder="mm:ss" required pattern="^[0-9]+:[0-9]{2}$">
+              </div>
+              <div class="form-group">
+                <label for="publish-source-type">Source Type</label>
+                <select id="publish-source-type" style="background: var(--color-pitch); border-color: rgba(255,255,255,0.08); color: #fff; width: 100%; padding: 8px 12px; border-radius: 8px;">
+                  <option value="youtube">YouTube Link</option>
+                  <option value="file">Local Video File</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Source Input YouTube URL (shown by default) -->
+            <div class="form-group" id="publish-wrapper-youtube">
+              <label for="publish-youtube-url">YouTube URL Link</label>
+              <input type="url" id="publish-youtube-url" placeholder="https://www.youtube.com/watch?v=..." required>
+            </div>
+
+            <!-- Source Input File Path (hidden by default) - Drag and Drop! -->
+            <div class="form-group hidden" id="publish-wrapper-file">
+              <label>Drag & Drop Lecture Video</label>
+              <div class="video-upload-dropzone" id="video-dropzone">
+                <input type="file" id="publish-file-input" accept="video/*" class="hidden-file-input">
+                <div class="dropzone-content" id="dropzone-default-state">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="upload-icon" style="width: 48px; height: 48px; color: var(--color-yellow-primary); margin-bottom: 12px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+                  </svg>
+                  <p class="dropzone-text" style="font-family: var(--font-heading); font-weight: 500; font-size: 0.95rem; margin: 0 0 6px 0; color: #fff;">
+                    Drag and drop your video file here, or <span style="color: var(--color-yellow-primary); cursor: pointer; text-decoration: underline;">browse</span>
+                  </p>
+                  <p class="dropzone-subtext" style="font-family: var(--font-body); font-size: 0.75rem; color: var(--color-text-muted); margin: 0;">
+                    Supports MP4, WebM, or OGG (Max 200MB)
+                  </p>
+                </div>
+                <div class="dropzone-content hidden" id="dropzone-success-state">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="upload-success-indicator" style="width: 48px; height: 48px; color: #4CAF50; margin-bottom: 12px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <p class="uploaded-filename" id="uploaded-filename-display" style="font-family: var(--font-heading); font-weight: 600; font-size: 0.95rem; margin: 0 0 8px 0; color: #fff; word-break: break-all; max-width: 80%;"></p>
+                  <button type="button" class="remove-uploaded-btn" id="btn-remove-video" style="background: rgba(255, 234, 0, 0.1); border: 1px solid var(--color-yellow-primary); color: var(--color-yellow-primary); padding: 6px 14px; border-radius: 6px; font-family: var(--font-heading); font-size: 0.75rem; font-weight: 600; cursor: pointer; transition: var(--transition-smooth); text-transform: uppercase; letter-spacing: 0.05em;">Remove File</button>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn full-width" style="margin-top: 15px;">
+              <span class="btn-text">Publish Recorded Lecture</span>
+              <span class="btn-glow"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ==================== TEACHER PANEL 2: STUDENT REGISTRY ==================== -->
+      <div class="tab-panel hidden" id="teacher-tab-students">
+        <div class="panel scrollable-panel">
+          <div class="panel-header flex-header">
+            <h2 class="panel-title">
+              <span class="yellow-bullet"></span>Manage Students
+            </h2>
+            <div class="search-box">
+              <input type="text" id="student-search-input" placeholder="Search student directory...">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="search-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.637 10.637Z" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Student Table -->
+          <div class="table-container">
+            <table class="students-table">
+              <thead>
+                <tr>
+                  <th>Student Details</th>
+                  <th>Academic Grade</th>
+                  <th>Management</th>
+                </tr>
+              </thead>
+              <tbody id="student-table-body">
+                <!-- Dynamically populated rows -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================== STUDENT DASHBOARD ==================== -->
+  <main id="student-dashboard" class="dashboard-layout hidden">
+    <!-- Navbar -->
+    <header class="dash-navbar">
+      <div class="nav-left">
+        <div class="nav-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="logo-svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.263 15.918a9 9 0 1 0 3.29-3.29m0 0A3 3 0 1 0 9 19.5h.008v-.008a2.999 2.999 0 0 0 0-5.992h-.008v.008Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707" />
+          </svg>
+        </div>
+        <div>
+          <span class="nav-brand">THE BLACKBOARD</span>
+          <span class="nav-badge badge-student">Student Hub</span>
+        </div>
+      </div>
+      <div class="nav-right">
+        <div class="user-profile">
+          <div class="avatar text-avatar active-student-avatar">AM</div>
+          <div class="profile-info">
+            <span class="profile-name">Alex Mercer</span>
+            <span class="profile-role">Computer Science & Physics</span>
+          </div>
+        </div>
+        <button type="button" class="theme-toggle-btn" title="Toggle Academic Theme" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--color-glass-border); border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; color: var(--color-yellow-primary); transition: var(--transition-smooth); margin-right: 12px; outline: none;">
+          <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 20px; height: 20px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m0 13.5V21M4.22 4.22l1.59 1.59m12.38 12.38 1.59 1.59M3 12h2.25m13.5 0H21M4.22 19.78l1.59-1.59m12.38-12.38 1.59-1.59M12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" />
+          </svg>
+          <svg class="theme-icon-moon hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 20px; height: 20px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+          </svg>
+        </button>
+        <button class="logout-btn" id="student-logout">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+          </svg>
+          <span>Disconnect</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Sub-Navbar Student Tab Bar -->
+    <div class="dash-tabs-bar">
+      <button class="dash-tab active" data-target="student-tab-schedule" data-role="student">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-svg-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+        </svg>
+        <span>My Schedule</span>
+      </button>
+      <button class="dash-tab" data-target="student-tab-bookings" data-role="student">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-svg-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+        </svg>
+        <span>Books Library</span>
+      </button>
+      <button class="dash-tab" data-target="student-tab-chatbot" data-role="student">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-svg-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0zm0 0h-.375M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 0 1-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+        </svg>
+        <span>blackie AI</span>
+      </button>
+      <button class="dash-tab" data-target="student-tab-recorded" data-role="student">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-svg-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25z" />
+        </svg>
+        <span>Recorded Library</span>
+      </button>
+    </div>
+
+    <!-- Dashboard Content Container -->
+    <div class="dash-container">
+      <!-- Top Metrics -->
+      <section class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.75 3.75 0 0 1 21 12Z" />
+            </svg>
+          </div>
+          <div>
+            <p class="metric-label">Academic Cohort</p>
+            <h3 class="metric-value" id="student-cohort-batch">Alpha Cohort</h3>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+            </svg>
+          </div>
+          <div>
+            <p class="metric-label">Library Accesses</p>
+            <h3 class="metric-value" id="count-student-books">8</h3>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.75 3.75 0 0 1 21 12Z" />
+            </svg>
+          </div>
+          <div>
+            <p class="metric-label">Completed Classes</p>
+            <h3 class="metric-value">24</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== STUDENT PANEL 1: MY SCHEDULE ==================== -->
+      <div class="tab-panel active" id="student-tab-schedule">
+        <div class="panel">
+          <div class="panel-header">
+            <h2 class="panel-title">
+              <span class="yellow-bullet"></span>Your Active Schedule
+            </h2>
+          </div>
+          <div class="class-cards-list" id="student-schedule-list">
+            <!-- Dynamically populated student schedule -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== STUDENT PANEL 2: BOOKS LIBRARY ==================== -->
+      <div class="tab-panel hidden" id="student-tab-bookings">
+        <div class="panel">
+          <div class="panel-header">
+            <h2 class="panel-title">
+              <span class="yellow-bullet"></span>Academic Reference Books
+            </h2>
+          </div>
+          <div class="books-grid" id="student-books-list">
+            <!-- Dynamic academic books list -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== STUDENT PANEL 3: AI COPILOT ==================== -->
+      <div class="tab-panel hidden" id="student-tab-chatbot">
+        <div class="panel chatbot-panel">
+          <div class="panel-header chatbot-header">
+            <div class="chatbot-title-group">
+              <div class="bot-indicator animate-pulse"></div>
+              <h2 class="panel-title">blackie AI Academic Copilot</h2>
+            </div>
+            <span class="badge font-mono">v1.4-online</span>
+          </div>
+          <div class="chatbot-messages" id="chatbot-chat-box">
+            <div class="chat-message bot">
+              <div class="message-content">
+                Hello Alex! I am your blackie AI assistant. Ask me anything about your class schedules, assignment due dates, or syllabus details! Try clicking one of the prompts below:
+              </div>
+            </div>
+          </div>
+          <div class="chatbot-suggestions">
+            <button class="suggestion-chip" data-question="When is my next Quantum Physics class?">Next physics class?</button>
+            <button class="suggestion-chip" data-question="How can I book a seat in Advanced Machine Learning?">How to book a class?</button>
+            <button class="suggestion-chip" data-question="Who is leading the lecture on PHY-402 tomorrow?">PHY-402 teacher?</button>
+          </div>
+          <form id="chatbot-input-form" class="chatbot-input-area">
+            <input type="text" id="chatbot-user-input" placeholder="Type an academic inquiry..." required autocomplete="off">
+            <button type="submit" class="chatbot-send-btn" aria-label="Send Message">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ==================== STUDENT PANEL 4: RECORDED LIBRARY ==================== -->
+      <div class="tab-panel hidden" id="student-tab-recorded">
+        <div class="panel">
+          <div class="panel-header flex-header" style="flex-wrap: wrap; gap: 15px;">
+            <h2 class="panel-title">
+              <span class="yellow-bullet"></span>Recorded Classes Library
+            </h2>
+            <div class="filter-controls-row" style="display: flex; gap: 12px; align-items: center;">
+              <div class="filter-group">
+                <select id="filter-recorded-subject" class="alloc-select" style="min-width: 140px; background-color: var(--color-pitch); border-color: rgba(255,255,255,0.08); height: 38px; padding: 4px 12px; border-radius: 6px; color: #fff; font-family: var(--font-body); font-size: 0.85rem; outline: none; cursor: pointer;">
+                  <option value="All">All Subjects</option>
+                  <option value="Physics">Physics</option>
+                  <option value="Chemistry">Chemistry</option>
+                  <option value="Maths">Mathematics</option>
+                  <option value="Astronomy">Astronomy</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <select id="filter-recorded-teacher" class="alloc-select" style="min-width: 160px; background-color: var(--color-pitch); border-color: rgba(255,255,255,0.08); height: 38px; padding: 4px 12px; border-radius: 6px; color: #fff; font-family: var(--font-body); font-size: 0.85rem; outline: none; cursor: pointer;">
+                  <option value="All">All Instructors</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="recorded-grid" id="student-recorded-list">
+            <!-- Dynamically populated video cards -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================== ADMIN DASHBOARD ==================== -->
+  <main id="admin-dashboard" class="dashboard-layout hidden">
+    <!-- Navbar -->
+    <header class="dash-navbar">
+      <div class="nav-left">
+        <div class="nav-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="logo-svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z" />
+          </svg>
+        </div>
+        <div>
+          <span class="nav-brand">THE BLACKBOARD</span>
+          <span class="nav-badge" style="background-color: rgba(255, 234, 0, 0.1); color: var(--color-yellow-primary); border-color: rgba(255, 234, 0, 0.2);">Master Admin</span>
+        </div>
+      </div>
+      <div class="nav-right">
+        <div class="user-profile">
+          <div class="avatar text-avatar" style="background-color: var(--color-yellow-primary); color: var(--color-pitch);">AD</div>
+          <div class="profile-info">
+            <span class="profile-name">Chief Administrator</span>
+            <span class="profile-role">Quantum Academy Control</span>
+          </div>
+        </div>
+        <button type="button" class="theme-toggle-btn" title="Toggle Academic Theme" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--color-glass-border); border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; color: var(--color-yellow-primary); transition: var(--transition-smooth); margin-right: 12px; outline: none;">
+          <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 20px; height: 20px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m0 13.5V21M4.22 4.22l1.59 1.59m12.38 12.38 1.59 1.59M3 12h2.25m13.5 0H21M4.22 19.78l1.59-1.59m12.38-12.38 1.59-1.59M12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" />
+          </svg>
+          <svg class="theme-icon-moon hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 20px; height: 20px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+          </svg>
+        </button>
+        <button class="logout-btn" id="admin-logout">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+          </svg>
+          <span>Disconnect</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Sub-Navbar Admin Tab Bar -->
+    <div class="dash-tabs-bar">
+      <button class="dash-tab active" data-target="admin-tab-allocator" data-role="admin">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-svg-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+        </svg>
+        <span>Batch & Teacher Allocator</span>
+      </button>
+      <button class="dash-tab" data-target="admin-tab-teachers" data-role="admin">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-svg-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a3 3 0 0 0-3-3H9.75a3 3 0 0 0-3-3h10.5a3 3 0 0 0-3 3H15a3 3 0 0 0-3 3ZM3.75 18h16.5M4.5 19.5h15m-15-3v-9a1.5 1.5 0 0 1 1.5-1.5h12a1.5 1.5 0 0 1 1.5 1.5v9m-15 0h15" />
+        </svg>
+        <span>Manage Faculty</span>
+      </button>
+      <button class="dash-tab" data-target="admin-tab-students" data-role="admin">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-svg-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493" />
+        </svg>
+        <span>Manage Students</span>
+      </button>
+      <button class="dash-tab" data-target="admin-tab-messages" data-role="admin">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-svg-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+        </svg>
+        <span>System Inbox</span>
+        <span class="badge" id="admin-unread-badge" style="background-color: var(--color-error); color: #fff; font-size: 0.62rem; padding: 2px 6px; border-radius: 100px; display: none; margin-left: 6px;">0</span>
+      </button>
+    </div>
+
+    <!-- Dashboard Content Container -->
+    <div class="dash-container">
+      <!-- Top Metrics -->
+      <section class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493" />
+            </svg>
+          </div>
+          <div>
+            <p class="metric-label">Total Batches</p>
+            <h3 class="metric-value">4 Cohorts</h3>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25" />
+            </svg>
+          </div>
+          <div>
+            <p class="metric-label">Faculty Roster</p>
+            <h3 class="metric-value" id="count-admin-teachers">3 Profiles</h3>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75" />
+            </svg>
+          </div>
+          <div>
+            <p class="metric-label">Total Students</p>
+            <h3 class="metric-value" id="count-admin-students">6 Registered</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== ADMIN PANEL 1: BATCH & TEACHER ALLOCATOR ==================== -->
+      <div class="tab-panel active" id="admin-tab-allocator">
+        <div class="panel scrollable-panel">
+          <div class="panel-header">
+            <h2 class="panel-title">
+              <span class="yellow-bullet"></span>Academic Cohort Allocation
+            </h2>
+          </div>
+          <div class="table-container">
+            <table class="students-table">
+              <thead>
+                <tr>
+                  <th>Student Details</th>
+                  <th>Assigned Batch</th>
+                  <th>Assigned Faculty Teacher</th>
+                  <th>Allocation Updates</th>
+                </tr>
+              </thead>
+              <tbody id="admin-allocation-table-body">
+                <!-- Populated dynamically with inline dropdowns -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== ADMIN PANEL 2: MANAGE FACULTY ==================== -->
+      <div class="tab-panel hidden" id="admin-tab-teachers">
+        <div class="dash-grid-split">
+          <!-- Teacher list panel -->
+          <div class="panel">
+            <div class="panel-header">
+              <h2 class="panel-title">
+                <span class="yellow-bullet"></span>Faculty Members
+              </h2>
+            </div>
+            <div class="table-container">
+              <table class="students-table">
+                <thead>
+                  <tr>
+                    <th>Teacher Name</th>
+                    <th>Department</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-teachers-table-body">
+                  <!-- Dynamically populated teachers -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Create Teacher panel -->
+          <div class="panel">
+            <div class="panel-header">
+              <h2 class="panel-title">
+                <span class="yellow-bullet"></span>Register Faculty Member
+              </h2>
+            </div>
+            <form id="admin-create-teacher-form" class="dashboard-form">
+              <div class="form-group">
+                <label for="admin-teacher-name">Faculty Name</label>
+                <input type="text" id="admin-teacher-name" placeholder="e.g., Dr. Alan Turing" required>
+              </div>
+              <div class="form-group">
+                <label for="admin-teacher-email">Faculty Academic Email</label>
+                <input type="email" id="admin-teacher-email" placeholder="e.g., turing@theblackboard.edu" required>
+              </div>
+              <div class="form-group">
+                <label for="admin-teacher-dept">Department / Subject Area</label>
+                <input type="text" id="admin-teacher-dept" placeholder="e.g., Computer Science" required>
+              </div>
+              <div class="form-group">
+                <label for="admin-teacher-password">Security Password</label>
+                <input type="password" id="admin-teacher-password" placeholder="Set security password (min. 6 characters)" required minlength="6" style="width: 100%; box-sizing: border-box;">
+              </div>
+              <button type="submit" class="submit-btn full-width">
+                <span class="btn-text">Register Faculty Member</span>
+                <span class="btn-glow"></span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== ADMIN PANEL 3: MANAGE STUDENTS ==================== -->
+      <div class="tab-panel hidden" id="admin-tab-students">
+        <div class="dash-grid-split">
+          <!-- Student list panel -->
+          <div class="panel">
+            <div class="panel-header">
+              <h2 class="panel-title">
+                <span class="yellow-bullet"></span>Registered Students
+              </h2>
+            </div>
+            <div class="table-container">
+              <table class="students-table">
+                <thead>
+                  <tr>
+                    <th>Student Name</th>
+                    <th>Email Address</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-students-table-body">
+                  <!-- Dynamically populated students -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Create Student panel -->
+          <div class="panel">
+            <div class="panel-header">
+              <h2 class="panel-title">
+                <span class="yellow-bullet"></span>Register New Student
+              </h2>
+            </div>
+            <form id="admin-create-student-form" class="dashboard-form">
+              <div class="form-group">
+                <label for="admin-student-name">Student Name</label>
+                <input type="text" id="admin-student-name" placeholder="e.g., Alice Liddell" required>
+              </div>
+              <div class="form-group">
+                <label for="admin-student-email">Student Academic Email</label>
+                <input type="email" id="admin-student-email" placeholder="e.g., alice@theblackboard.edu" required>
+              </div>
+              <button type="submit" class="submit-btn full-width">
+                <span class="btn-text">Register Student</span>
+                <span class="btn-glow"></span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== ADMIN PANEL 4: SYSTEM INBOX ==================== -->
+      <div class="tab-panel hidden" id="admin-tab-messages">
+        <div class="dash-grid-split mail-layout">
+          <!-- Mail List Panel -->
+          <div class="panel mail-list-panel">
+            <div class="panel-header">
+              <h2 class="panel-title">
+                <span class="yellow-bullet"></span>Inbox Notifications
+              </h2>
+              <button type="button" class="btn-clear-all" id="btn-clear-all-mail">Purge All</button>
+            </div>
+            <div class="mail-list-container" id="admin-mail-list">
+              <div class="mail-empty-state">
+                <p>No new system telemetry logs.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mail Viewer Panel -->
+          <div class="panel mail-viewer-panel">
+            <div class="panel-header">
+              <h2 class="panel-title">
+                <span class="yellow-bullet"></span>System Console Decrypt
+              </h2>
+            </div>
+            <div class="mail-viewer-content" id="admin-mail-viewer">
+              <div class="mail-viewer-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="placeholder-icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+                <p>Select a message to decode transmission telemetry.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================== GRADE UPDATE DIALOG (MODAL) ==================== -->
+  <div id="grade-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Update Student Record</h3>
+        <button type="button" class="close-modal-btn" id="close-grade-modal">&times;</button>
+      </div>
+      <form id="grade-update-form">
+        <input type="hidden" id="modal-student-id">
+        <div class="form-group">
+          <label>Student Name</label>
+          <input type="text" id="modal-student-name" readonly class="readonly-input">
+        </div>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label for="modal-student-grade">Current Grade</label>
+          <select id="modal-student-grade" style="width: 100%; background: var(--color-pitch); border: 1px solid rgba(255, 255, 255, 0.08); color: #fff; padding: 12px; border-radius: 8px; font-family: var(--font-body); outline: none; box-sizing: border-box;">
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            <option value="B-">B-</option>
+            <option value="C+">C+</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+          </select>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="cancel-btn" id="cancel-grade-modal">Discard Changes</button>
+          <button type="submit" class="submit-btn">
+            <span class="btn-text">Save Changes</span>
+            <span class="btn-glow"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== CLASS UPDATE DIALOG (MODAL) ==================== -->
+  <div id="class-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Edit Lecture Details</h3>
+        <button type="button" class="close-modal-btn" id="close-class-modal">&times;</button>
+      </div>
+      <form id="class-update-form">
+        <input type="hidden" id="modal-class-id">
+        <div class="form-group">
+          <label for="modal-class-title">Lecture Topic</label>
+          <input type="text" id="modal-class-title" required class="form-input">
+        </div>
+        <div class="form-group">
+          <label for="modal-class-subject">Course Code</label>
+          <input type="text" id="modal-class-subject" required class="form-input">
+        </div>
+        <div class="form-row grid-3">
+          <div class="form-group">
+            <label for="modal-class-time">Start Time</label>
+            <input type="text" id="modal-class-time" required placeholder="e.g., 10:00 AM" class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="modal-class-duration">Duration (mins)</label>
+            <input type="number" id="modal-class-duration" required class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="modal-class-location">Room / Link</label>
+            <input type="text" id="modal-class-location" required class="form-input">
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="cancel-btn" id="cancel-class-modal">Discard</button>
+          <button type="submit" class="submit-btn">
+            <span class="btn-text">Save Lecture</span>
+            <span class="btn-glow"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MOVIE/LECTURE PLAYER DIALOG (MODAL) ==================== -->
+  <div id="player-modal" class="modal-overlay hidden">
+    <div class="modal-card player-card">
+      <div class="modal-header">
+        <h3 id="player-modal-title">Lecture Playback</h3>
+        <button type="button" class="close-modal-btn" id="close-player-modal">&times;</button>
+      </div>
+      <div class="video-mock-container">
+        <!-- Visual representation of live playing state -->
+        <div class="mock-video-canvas">
+          <div class="radar-scan"></div>
+          <div class="particle-waves"></div>
+          <div class="playback-overlay">
+            <div class="playback-icon animate-pulse">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+            <p>Streaming Quantum Archival Server...</p>
+          </div>
+        </div>
+        <div class="player-controls">
+          <button class="player-btn" id="player-play-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+            </svg>
+          </button>
+          <div class="progress-bar-wrapper">
+            <span class="current-time">02:14</span>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 32%"></div>
+            </div>
+            <span class="total-time" id="player-modal-duration">45:10</span>
+          </div>
+          <button class="player-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ADMIN SECURE PASSCODE DIALOG (MODAL) ==================== -->
+  <div id="admin-auth-modal" class="modal-overlay hidden">
+    <div class="modal-card" style="max-width: 400px; border-color: var(--color-yellow-primary); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 234, 0, 0.15);">
+      <div class="modal-header" style="border-bottom: 1px solid rgba(255, 255, 255, 0.06); padding-bottom: 15px;">
+        <h3 style="color: var(--color-yellow-primary); font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 8px; margin: 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width: 20px; height: 20px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 00 2.25 2.25Z" />
+          </svg>
+          Master Override Terminal
+        </h3>
+        <button type="button" class="close-modal-btn" id="close-admin-auth-modal" style="background: none; border: none; color: var(--color-text-muted); font-size: 1.5rem; cursor: pointer;">&times;</button>
+      </div>
+      <form id="admin-auth-form" style="margin-top: 15px;">
+        <p style="font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 20px; font-family: var(--font-body); line-height: 1.5;">
+          This terminal is restricted to authorized personnel. Enter the administrative security passcode to gain console override.
+        </p>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label for="admin-auth-passcode" style="font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-yellow-primary); font-family: var(--font-heading); margin-bottom: 8px; display: block; text-align: left;">Secure Access Key</label>
+          <input type="password" id="admin-auth-passcode" placeholder="Enter administrative passcode" required 
+                 style="width: 100%; background: var(--color-pitch); border: 1px solid rgba(255, 255, 255, 0.08); color: #fff; padding: 12px; border-radius: 8px; font-family: var(--font-body); outline: none; box-sizing: border-box;">
+        </div>
+        <div style="font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: 20px; font-family: var(--font-body); background: rgba(255,255,255,0.02); border: 1px dashed rgba(255,255,255,0.06); padding: 8px; border-radius: 6px; text-align: left;">
+          <span style="color: var(--color-yellow-primary); font-weight: 600;">Demo Hint:</span> Use passcode <code style="color: #fff; font-weight: 600;">admin123</code> to override security protocols.
+        </div>
+        <div class="modal-actions" style="margin-top: 0; padding-top: 0; border: none; display: flex; justify-content: flex-end; gap: 10px;">
+          <button type="submit" class="submit-btn" style="width: 100%;">
+            <span class="btn-text">Decrypt Core</span>
+            <span class="btn-glow"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MOCK EMAIL SENT OVERLAY ALERT ==================== -->
+  <div id="email-sent-alert" class="email-alert-overlay hidden">
+    <div class="email-alert-card">
+      <div class="email-alert-header">
+        <div class="alert-header-left">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="alert-title">SYSTEM MAIL TRANSMISSION LOG</span>
+        </div>
+        <button type="button" class="alert-close-btn" id="close-email-alert">&times;</button>
+      </div>
+      <div class="email-alert-body">
+        <div class="mail-headers">
+          <div class="mail-header-row"><span class="header-label">FROM:</span> <span id="alert-mail-from" class="header-val font-mono"></span></div>
+          <div class="mail-header-row"><span class="header-label">TO:</span> <span id="alert-mail-to" class="header-val font-mono"></span></div>
+          <div class="mail-header-row"><span class="header-label">SUBJ:</span> <span id="alert-mail-subject" class="header-val text-yellow"></span></div>
+          <div class="mail-header-row"><span class="header-label">TIME:</span> <span id="alert-mail-time" class="header-val font-mono"></span></div>
+        </div>
+        <div class="mail-separator"></div>
+        <pre class="mail-body-content" id="alert-mail-body"></pre>
+      </div>
+      <div class="email-alert-footer">
+        <span class="blink-cursor">&gt;_</span> Email successfully dispatched to administrative roster database queue.
+      </div>
+    </div>
+  </div>
+
+  <script src="./main.js?v=1.0.1"></script>
+</body>
+</html>
